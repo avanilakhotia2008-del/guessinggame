@@ -1,33 +1,25 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 int main()
 {
-  int input = 0;
-  cin >> input;
+  srand(time(NULL));
+  char playagain = 'y';
+  while(playagain == 'y'){
+    int number = rand();
+    int guess = 0;
+    int guesses = 0;
 
-  if (input == 3 || input == 6)
-    {
-      cout << "You put in a 3 or 6 or both!" << endl;
-    }
-  else ig (input >= 4 && input <= 7){
-      cout << "You put in a number between 4 and 7!" << endl;
-    }
+    while(guess != number){
+    cin >> guess;
+    cout << guess << endl;
 
-  else {
-    cout << "you put in a diff number" <<endl;
-  }
+    return 0;
 
-  switch (input){
-  case 3: cout << "You put in a 3!" << endl;
-    break
-  case 4: cout << "You put in a 4!" << endl;
-    break
-  default: cout << "you enetered something else" << endl;
-  }
-  
-  cout << input << endl;
-  return 0; 
+    }}
+   
 
 }
